@@ -4,9 +4,9 @@ const env = process.env.NODE_ENV || 'development';
 
 //use a local .env for local development
 //production builds should be using environment vars from docker
-if(env === 'development') {
-	console.log('looking for local .env file');
-	require('dotenv').config();
+if (env === 'development') {
+  console.log('looking for local .env file');
+  require('dotenv').config();
 }
 
 const path = require('path');

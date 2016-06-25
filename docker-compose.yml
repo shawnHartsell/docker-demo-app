@@ -6,6 +6,9 @@ services:
       context: ./db/pg
   app:
     build: .
+    command: sh ./dev-start-app.sh
+    volumes:
+        - .:/app
     container_name: todo-app
     environment:
       PGHOST: db
